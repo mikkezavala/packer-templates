@@ -1,8 +1,8 @@
 sed -i "s/^.*requiretty/#Defaults requiretty/" /etc/sudoers
-yum -y -q install gcc make gcc-c++ kernel-devel-`uname -r` \
-	git wget zlib zlib-devel libyaml libyaml-devel readline readline-devel libffi-devel \
-	openssl openssl-devel perl bzip2 autoconf automake libtool bison iconv-devel
+yum -y -q install gcc make gcc-c++ git wget zlib zlib-devel libyaml libyaml-devel \
+	readline readline-devel libffi-devel openssl openssl-devel perl bzip2 autoconf automake libtool bison iconv-devel
 
+yum -y -q install http://vault.centos.org/6.5/os/x86_64/Packages/kernel-devel-`uname -r`.rpm
 
 yum -y -q remove ruby ruby-devel
 mkdir /tmp/ruby-build && cd /tmp/ruby-build
